@@ -10,22 +10,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class DbServiceTests {
 
-	@Autowired
-	DbService dbService;
+    @Autowired
+    DbService dbService;
 
-	@Test
-	void shouldWorkWithoutHack() {
-		List<String> myStuff = dbService.getStuff("BETA", "BLUE", false);
+    @Test
+    void shouldWorkWithoutHack() {
+        List<String> myStuff = dbService.getStuff("BETA", false);
 
-		assertEquals(1, myStuff.size());
-		assertEquals("Ada95", myStuff.get(0));
-	}
+        assertEquals(1, myStuff.size());
+        assertEquals("Ada95", myStuff.get(0));
+    }
 
-	@Test
-	void shouldWorkWithHack() {
-		List<String> myStuff = dbService.getStuff("BETA", "BLUE", true);
+    @Test
+    void shouldWorkWithHack() {
+        List<String> myStuff = dbService.getStuff("BETA", true);
 
-		assertEquals(1, myStuff.size());
-		assertEquals("Ada95", myStuff.get(0));
-	}
+        assertEquals(1, myStuff.size());
+        assertEquals("Ada95", myStuff.get(0));
+    }
 }

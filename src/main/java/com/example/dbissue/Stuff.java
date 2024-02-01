@@ -16,9 +16,6 @@ public class Stuff {
     @Column
     public String option;
 
-    @Column
-    public String flag;
-
     @ManyToOne
     public Release release;
 }

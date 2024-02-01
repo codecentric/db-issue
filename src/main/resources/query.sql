@@ -9,5 +9,4 @@ WITH q1 AS (SELECT R.RELEASE_VERSION FROM RELEASE R WHERE R.ID = :releaseId),
 
 SELECT *
 FROM X
-WHERE flag = :flag
-  AND option = :option;
+WHERE option = :option;
